@@ -68,7 +68,7 @@ def optimalZeropad(x, fs, f):
 
     # Split the signal and add the zero padding in the middle.
     fftbuffer = np.zeros(N)
-    fftbuffer[:hM1] = x[hM1:]
+    fftbuffer[:hM1] = x[hM2:]
     fftbuffer[N-hM2:] = x[:hM2]
 
     X = fft(fftbuffer)
